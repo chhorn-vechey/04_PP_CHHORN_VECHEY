@@ -99,14 +99,24 @@ pip install -r requirements.txt
 poetry install
 ```
 
-### 2. Run Standalone Vector Check (Homework Step 4)
+### 2. (Optional) Test Pipeline Stages Step-by-Step
+You can test each stage individually to see how it works:
+```bash
+python -m src.ingestion     # Step 1: Tests loading documents from data/raw/
+python -m src.chunking      # Step 2: Tests text splitting & compares strategies
+python -m src.embeddings    # Step 3: Tests vector embedding generation
+python -m src.vector_store  # Step 4: Indexes documents into ChromaDB
+```
+
+### 3. Run Standalone Vector Check (Homework Step 4)
 Before opening the chat app, test the vector search by itself:
 ```bash
 python scripts/demo_vector_check.py
 ```
-This script embeds a test question, searches ChromaDB, and prints the top 3 matching chunks to prove the offline steps work.
+This script embeds a test question, searches ChromaDB, and prints the top 3 matching chunks to prove the offline steps work.  
+*(Note: If the database is not indexed yet, the script will automatically index it for you!)*
 
-### 3. Run the Chat App (Homework Step 6)
+### 4. Run the Chat App (Homework Step 6)
 Start the terminal chat app:
 ```bash
 python main.py

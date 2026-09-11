@@ -29,8 +29,10 @@ def run_demo_check(test_question: str = "How do I reset my forgotten PIN?", top_
     print(f"Total Chunks in Vector Store  : {total_chunks}")
 
     if total_chunks == 0:
-        print("[Warning] Collection is empty! Please run 'python -m src.vector_store' first.")
-        return
+        print("[Notice] Vector store is empty. Populating from documents now...")
+        from src.pipeline import setup_rag_system
+        total_chunks = setup_rag_system()
+        print(f"Indexed {total_chunks} chunks successfully!\n")
 
     # 2. Embed the test question
     print(f"\n[1] Embedding test question: '{test_question}'")
