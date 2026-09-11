@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "04-pp-chhorn-vechey"
+version = "0.1.0"
+description = "RAG Fundamentals Week 5 Homework: Baseline Chat with Documents App"
+authors = ["Chhorn Vechey"]
+readme = "README.md"
+packages = [{include = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+chromadb = ">=0.4.0"
+ollama = ">=0.1.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

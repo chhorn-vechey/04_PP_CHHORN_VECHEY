@@ -1,0 +1,20 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+
+# ChromaDB local persistent directory
+chroma_db/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
