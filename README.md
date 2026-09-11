@@ -99,8 +99,8 @@ pip install -r requirements.txt
 poetry install
 ```
 
-### 2. (Optional) Test Pipeline Stages Step-by-Step
-You can test each stage individually to see how it works:
+### 2. Test Pipeline Stages Step-by-Step
+You can test each stage individually to see how each step works:
 ```bash
 python -m src.ingestion     # Step 1: Tests loading documents from data/raw/
 python -m src.chunking      # Step 2: Tests text splitting & compares strategies
